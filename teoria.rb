@@ -32,7 +32,7 @@ class Teoria
   public
   def pergunta_testemunha
     monta_resposta
-    unless (@resposta.include? (1 or 2 or 3))
+    unless @resposta.any? {|item| [1, 2, 3].include? item}
       @resultado.push(0)
     else
       @resultado.push(@resposta.sample)

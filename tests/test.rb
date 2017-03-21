@@ -10,10 +10,10 @@ class TeoriaTest < Test::Unit::TestCase
   end
 
   def test_all_wrong_return
-    assert set_up(1,1,1).include? (1 or 2 or 3)
+    assert set_up(1, 1, 1).any? {|item| [1, 2, 3].include? item}  
   end
 
   def test_all_correct_return
-    assert set_up(4,5,7) == [0]
+    assert set_up(4, 5, 7) == [0]
   end
 end
