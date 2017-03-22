@@ -1,4 +1,4 @@
-module DADOS
+module Dados
 
   SUSPEITOS = [
     "Charles B. Abbage",
